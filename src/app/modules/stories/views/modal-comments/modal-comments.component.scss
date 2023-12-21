@@ -1,0 +1,38 @@
+.header-modal-comment {
+  padding: 0 !important;
+  display: flex;
+
+  >.container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-title-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    >.left :not(:last-child) {
+      border-right: 1px solid #D9D9D9;
+      padding-right: 0.5rem;
+    }
+
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.9rem;
+    border-bottom: 1px solid #D9D9D9;
+  }
+}
+
+.mat-mdc-dialog-content.mdc-dialog__content.content-modal-comment {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #F1F1F1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #E0E0E0;
+  }
+}

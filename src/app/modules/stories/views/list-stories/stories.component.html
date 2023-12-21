@@ -1,0 +1,26 @@
+<div class="app-home">
+  <div class="wrap-content">
+    <div class="grid grid-cols-2 gap-4">
+      <div class="card-story mb-3" *ngFor="let story of dataStories">
+        <p>{{story.title}}</p>
+        <div class="flex">
+          <p class=" text-grey4 text-xs">{{story.score}} points by {{story.by}}</p>
+          <!-- <p class=" text-grey1 text-xs">{{story.score}} points by {{story.by}}</p> -->
+        </div>
+        <div class="footer">
+          <div class="flex gap-2 items-center">
+            <img src="../../../assets/img/icons/clock.svg" alt="clock" />
+            <p class=" text-grey4 text-xs">{{differenceTime(story.time)}}</p>
+          </div>
+          <div class="btn-comment gap-1 flex flex-nowrap" *ngIf="story?.kids" (click)="openDetailComment(story)">
+            <img src="../../../assets/img/icons/comment.svg" alt="comment" />
+            <div class="flex">
+              {{story.kids ? story.kids.length : 0}}&nbsp;Comment
+            </div>
+            <img src="../../../assets/img/icons/arrow-right.svg" alt="arrow-right" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

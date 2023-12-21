@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
+## Project setup
+
+Before you run this program please to install [pnpm](https://pnpm.io/installation) and after downloaded run `pnpm install` to installing dependencies on local computer
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

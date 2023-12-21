@@ -1,0 +1,33 @@
+<span mat-dialog-title class="header-modal-comment">
+  <div class="container">
+    <div class="flex justify-end w-100">
+      <mat-icon aria-hidden="false" aria-label="x-icon" fontIcon="close" class="cursor-pointer"
+        mat-dialog-close></mat-icon>
+    </div>
+    <div class="w-100 mx-7 ">
+      <p class=" font-bold text-black1">{{data.title}}</p>
+      <div class="sub-title-content justify-between">
+        <div class="left flex items-center">
+          <p class=" text-grey4 text-xs">{{data.score}} points by {{data.by}}</p>
+          <div class="flex gap-2 items-center">
+            <img src="assets/img/icons/clock.svg" alt="clock" />
+            <p class=" text-grey4 text-xs">{{differenceTime(data.time)}}</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="../../../../../assets/img/icons/comment-black.svg" alt="comment-icon" />
+          <p class="text-black1 text-sm font-semibold">{{data.kids?.length}} Comment</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</span>
+<div mat-dialog-content class="content-modal-comment">
+  <div class="comment mb-2" *ngFor="let story of dataStories">
+    <div class="mb-2 py-2 px-4 rounded-md" style="background-color: #F4F4F4;">
+      <p class=" text-sm font-bold text-black1">{{story.by}}</p>
+      <div class=" text-sm text-black1" [innerHTML]="story.text"></div>
+    </div>
+    <p class=" text-sm text-black1 px-4">{{differenceTime(story.time)}}</p>
+  </div>
+</div>
